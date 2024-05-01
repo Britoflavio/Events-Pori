@@ -1,4 +1,4 @@
-import Place from "../../models/places.js"
+import Place from "../../models/places.model.js"
 
 export const placeId = async(req, res) => {
   const placeId = req.params.id

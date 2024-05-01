@@ -4,7 +4,7 @@ import cors from 'cors'
 import express from 'express'
 import morgan from 'morgan'
 
-import indexRouter from './routes/index.js'
+import indexRouter from './routes/index.route.js'
 
 const app = express()
 const port = 3000

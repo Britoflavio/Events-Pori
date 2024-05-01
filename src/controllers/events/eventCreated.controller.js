@@ -1,5 +1,4 @@
-import Event from "../../models/events.js"
-import User from "../../models/users.js"
+import Event from "../../models/events.model.js"
 
 export const newEvent = async(req, res) => {
 

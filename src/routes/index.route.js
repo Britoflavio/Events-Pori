@@ -1,7 +1,7 @@
 import {Router} from 'express'
-import userRoute from './users.js'
-import placeRouter from './place.js'
-import eventRouter from './events.js'
+import userRoute from './users.route.js'
+import placeRouter from './place.route.js'
+import eventRouter from './events.route.js'
 const router = Router()
 
 //Pagiina main

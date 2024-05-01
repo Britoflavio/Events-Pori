@@ -1,4 +1,4 @@
-import User from "../../models/users.js" 
+import User from "../../models/users.model.js" 
 import bycrypt from 'bcrypt'
 
 export let create = async(req, res) => {

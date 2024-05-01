@@ -1,5 +1,5 @@
 import { resolveSoa } from 'dns'
-import User from '../../models/users.js'
+import User from '../../models/users.model.js'
 import bycrypt from 'bcrypt'
 
 
