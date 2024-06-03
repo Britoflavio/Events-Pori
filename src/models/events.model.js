@@ -6,7 +6,7 @@ const schema = new Schema({
   name: {type:String,required:true},
   photo:{type: String},
   description: {type:String,required:true},
-  attendes: {type:Types.ObjectId, ref: 'users'},
+  attendes: [{type:Types.ObjectId, ref: 'users'}],
   minimunAge:{type:Number,required:true},
   organizer: {type:Types.ObjectId, ref:'users'}
 })
