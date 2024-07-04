@@ -8,7 +8,7 @@ export const newEvent = async(req, res) => {
       return res.status(201)
       .json({
         succes:true,
-        msg:'Se creo el evvento correctamente'
+        msg:'Se creo el evento correctamente'
       })
       
       }
