@@ -1,6 +1,8 @@
 import User from "../../models/users.model.js" 
 import bycrypt from 'bcrypt'
+import jwt from 'jsonwebtoken'
 
+const secret = process.env.SECRET
 export let create = async(req, res) => {
 
   req.body.password = bycrypt.hashSync(req.body.password, 10)
@@ -11,15 +13,17 @@ export let create = async(req, res) => {
     const repeatEmail = await User.findOne({'email':emailIngresado},{name:1})
 
     if(!repeatEmail){
+     
       await User.create(req.body)
       return res.status(201).json({
        success:true,
-       user:req.body
+       user:req.body,
+     
       })
     }else{
       return res.status(400).json({
         success:false,
-        msg:'This email is in use'
+        msg:'Email en uso'
       })
     }
   } catch (error) {

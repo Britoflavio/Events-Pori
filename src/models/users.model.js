@@ -8,7 +8,7 @@ let schema = new Schema({
   password:{type:String,required:true},
   age:{type:Number,required:true},
   genre:{type:String,required:false},
-  events: {type:Types.ObjectId, ref:'events'},
+  events: [{type:Types.ObjectId, ref:'events'}],
   role:{type:String,required:true}
 })
 
